@@ -37,42 +37,52 @@ Assumes:
 Instructions For Use
 ---
 1. Clone this repository
+
 	git clone git@github.com:julliette/vagrant-angular-env.git
 2. Navigate into the created folder
+
 	cd vagrant-angular-env
 3. Init the submodules
+
 	git submodule --init
 4. Navigate into the chef folder
+
 	cd chef
 5. Install the chef cookbooks for the e2e box
+
 	librarian-chef install
 
 You're ready to roll! Now you can bring up the boxes:
+
 	vagrant up
 or, if you only want one of the boxes:
+
 	vagrant up dev
 
 	vagrant up e2e
 and then, to access the box:
+
 	vagrant ssh dev
 
 If either box gives you trouble with tools not being installed that should, try re-provisioning them before filing a bug:
+
 	vagrant provision <machine name>
 
 Supporting Tools Installation
 ----
-## Vagrant
+### Vagrant
 See [Vagrant's Installation Instructions](http://docs.vagrantup.com/v2/installation/index.html)
 
-## VirtualBox
+### VirtualBox
 See [Vagrant's VirtualBox Installation Instructions](http://docs.vagrantup.com/v2/virtualbox/index.html)
 
-## Libarian-Chef
+### Libarian-Chef
 Assuming you have Ruby installed on your system, you should be able to just run:
+
 	gem install librarian-chef
 
 (If you also need Ruby, [go here](https://www.ruby-lang.org/en/downloads/))
 
-## A note about Puppet:
+### A note about Puppet:
 I'm pretty sure you don't need to install Puppet in order for Vagrant to provision boxes with it. If I'm wrong, you can see [Puppet's Installation Instructions](http://docs.puppetlabs.com/guides/installation.html) Follow the instructions for a Standalone Node.
 
