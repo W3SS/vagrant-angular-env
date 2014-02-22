@@ -23,7 +23,7 @@ class { 'apt_get_update':
  
 # ExecJS runtime.
 class { 'nodejs':
-  version => 'stable',
+  version => 'latest',
 }
 
 # --- PhantomJS ----------------------------------------------------------------
