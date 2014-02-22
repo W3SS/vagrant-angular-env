@@ -22,6 +22,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     dev.vm.network :private_network, ip: "192.168.205.10"
     dev.vm.network :forwarded_port, guest: 3000, host: 3001
     dev.vm.network :forwarded_port, guest: 8000, host: 8001
+    dev.vm.network :forwarded_port, guest: 35729, host: 35729
 
     dev.vm.provision "puppet" do |puppet|
       puppet.manifests_path = "puppet/manifests"
