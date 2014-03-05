@@ -68,6 +68,19 @@ If either box gives you trouble with tools not being installed that should, try 
 
 	vagrant provision <machine name>
 
+If you experience issues with Windows
+---
+if there’s an error message when you login:
+
+	-bash: /etc/profile.d/nodejs.sh: line 10: syntax error: unexpected end of file
+
+The issue is that the line endings are for Windows files (either done by git or puppet when generating this .sh file) and Ubuntu can’t understand them. To clean the line endings out:
+
+	sudo apt-get install tofrodos
+	sudo fromdos /etc/profile.d/nodejs.sh
+	
+and then logout and log back in. The error should be gone.
+
 Supporting Tools Installation
 ----
 ### Vagrant
