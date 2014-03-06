@@ -47,6 +47,7 @@ Instructions For Use
 3. Init the submodules
 
 	git submodule init
+	
 	git submodule update
 	
 4. Navigate into the chef folder
