@@ -39,15 +39,20 @@ Instructions For Use
 1. Clone this repository
 
 	git clone git@github.com:julliette/vagrant-angular-env.git
+	
 2. Navigate into the created folder
 
 	cd vagrant-angular-env
+	
 3. Init the submodules
 
-	git submodule --init
+	git submodule init
+	git submodule update
+	
 4. Navigate into the chef folder
 
 	cd chef
+	
 5. Install the chef cookbooks for the e2e box
 
 	librarian-chef install
